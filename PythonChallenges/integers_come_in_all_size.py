@@ -23,9 +23,14 @@ def exponent(base,power):
     # Function to compute the task
 def compute_answer(one,two,three,four):
     result = exponent(one,two) + exponent(three,four)
+    return result
 
-
+        # The data from the user
 num_one = raw_input("Enter the first number : ")
 num_two = raw_input("Enter the second number : ")
 num_three = raw_input("Enter the third number : ")
 num_four = raw_input("Enter the fourth number : ")
+
+print compute_answer(num_one,num_two,
+                    num_three,num_four)
+                    
