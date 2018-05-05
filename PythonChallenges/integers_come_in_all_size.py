@@ -5,20 +5,15 @@
 
 
         # Function to compute te exponentiation
-import sys
-
 def exponent(base,power):
     count = 1
-    result = base
+    result = 1
     if power == 0:
         return 1
-    elif power == count:
-        return base
     else:
-        while count < power:
-            result = result * base
-            count += count
-
+        while count <= power:
+            result *= base
+            count += 1
     return result
 
     # Function to compute the task
@@ -32,5 +27,4 @@ num_two = raw_input("Enter the second number : ")
 num_three = raw_input("Enter the third number : ")
 num_four = raw_input("Enter the fourth number : ")
 
-final_answer = compute_answer(int(num_one),int(num_two),int(num_three),int(num_four))
-print final_answer
+print compute_answer(int(num_one),int(num_two),int(num_three),int(num_four))
