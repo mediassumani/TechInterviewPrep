@@ -3,6 +3,9 @@
 # Programmer : Medi Assumani
 # Task : Read four numbers, a,b,c,d, and print the result of a^b + c^d
 
+
+        # Function to compute te exponentiation
+
 def exponent(base,power):
     count = 1
     result = base
@@ -15,14 +18,11 @@ def exponent(base,power):
             result *= base
             count++
 
+    return result
 
-
-
-
-
-
-
-def compute(one,two,three,four):
+    # Function to compute the task
+def compute_answer(one,two,three,four):
+    result = exponent(one,two) + exponent(three,four)
 
 
 num_one = raw_input("Enter the first number : ")
