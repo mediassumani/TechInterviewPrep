@@ -21,10 +21,14 @@ def compute_answer(one,two,three,four):
     result = exponent(one,two) + exponent(three,four)
     return result
 
-        # The data from the user
-num_one = raw_input("Enter the first number : ")
-num_two = raw_input("Enter the second number : ")
-num_three = raw_input("Enter the third number : ")
-num_four = raw_input("Enter the fourth number : ")
+def main():
+    # The data from the user
+    num_one = raw_input("Enter the first number : ")
+    num_two = raw_input("Enter the second number : ")
+    num_three = raw_input("Enter the third number : ")
+    num_four = raw_input("Enter the fourth number : ")
+     
+    print compute_answer(int(num_one),int(num_two),int(num_three),int(num_four))
 
-print compute_answer(int(num_one),int(num_two),int(num_three),int(num_four))
+if __name__ == "__main__":
+        main()
