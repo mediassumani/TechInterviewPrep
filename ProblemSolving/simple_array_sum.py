@@ -4,16 +4,12 @@
 # Time used : 5 minutes
 
 def array_sum(array):
-    sum = 0
-    for num in array:
-        sum += num
-    return sum
-
+    sum = [n + n for n in array]
+    return sum[len(sum) - 1]
 
 def main():
     list = [1,2,3]
     print(array_sum(list))
-
 
 if __name__ == '__main__':
     main()
