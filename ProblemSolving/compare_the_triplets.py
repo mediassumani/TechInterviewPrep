@@ -5,20 +5,16 @@
 # Time used : 17 minutes
 
 def comparison(first_scores, second_scores):
-    a_score = 0
-    b_score = 0
-    final_scores = []
+
+    final_scores = [0,0] # index 0 is for a and index 1 is for b
     assert(len(first_scores) == len(second_scores))
     for index in range(len(first_scores)):
         if first_scores[index] > second_scores[index]:
-            a_score += 1
+            final_scores[0] += 1
         elif first_scores[index] < second_scores[index]:
-            b_score += 1
+            final_scores[len(final_scores) - 1] += 1
         else:
             continue
-
-    final_scores.append(a_score)
-    final_scores.append(b_score)
     return final_scores
 
 def main():
