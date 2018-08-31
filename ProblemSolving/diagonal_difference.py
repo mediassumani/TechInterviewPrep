@@ -5,14 +5,11 @@
 
 import math
 
-
-# n is the number or rows and columns
-# matrix is the multi-dimentional array
+# n is the number or rows and columns and matrix is the multi-dimentional array
 def diagonal_difference(n, matrix):
     left_to_right_sum = 0
     right_to_left_sum = 0
     counter = 1
-
     for row in range(len(matrix)):
         temp_array = matrix[row]
         for col in range(len(matrix)):
@@ -20,7 +17,6 @@ def diagonal_difference(n, matrix):
             left_to_right_sum += temp_array[counter - 1]
             counter += 1
             break
-
     return (math.fabs(left_to_right_sum - right_to_left_sum))
 
 def main():
