@@ -28,7 +28,7 @@ def plus_minus(arr):
             num_of_negatives += 1
         else:
             num_of_zeroes += 1
-            
+
     return (format((num_of_positives/arr_length), '.6f'),format((num_of_negatives/arr_length), '.6f'), format((num_of_zeroes/arr_length), '.6f'))
 
 def main():
