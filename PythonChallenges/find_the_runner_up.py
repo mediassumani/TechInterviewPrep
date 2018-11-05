@@ -1,21 +1,16 @@
-def find_max(arr):
-    max = 0
-    runner_up = 0
-    for num in arr:
-        if num >= max:
-            max = num
-        if (num + 1) == max:
-            runner_up = num
+"""
 
-    return runner_up
+Given the participants' score sheet for your University Sports Day, you are
+required to find the runner-up score. You are given scores. Store them in a
+list and find the score of the runner-up.
 
-def find_runner_up(n,arr):
-
-    runner_up = find_max(arr)
-    return runner_up
-
-
-if __name__ == '__main__':
-    n = int(input())
-    arr = map(int, input().split())
-    print(find_runner_up(n,arr))
+"""
+def find_runner_up(arr,n):
+    counter = n
+    sorted_list = sorted(arr)
+    while counter > 0:
+        if sorted_list[counter - 2] != sorted_list[counter - 1]:
+            return sorted_list[counter - 2]
+        else:
+            counter -= 1
+    return counter
