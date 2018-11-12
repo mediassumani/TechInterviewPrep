@@ -1,38 +1,29 @@
-"""
-Consider the following:
+def filter(string):
+    """Returns a dupliacate-free filtered string """
 
-A string, , of length  where .
-An integer, , where  is a factor of .
-We can split  into  subsegments where each subsegment, , consists of a contiguous block of  characters in .
- Then, use each  to create string  such that:
+    filtered_string = ""
+    for char in string:
+        if char not in filtered_string:
+            filtered_string += char
 
-The characters in  are a subsequence of the characters in .
-Any repeat occurrence of a character is removed from the string such that each character in  occurs exactly once. In other words, if the character at some index  in  occurs at a previous index  in , then do not include the character in string .
-Given  and , print  lines where each line  denotes string .
-
-"""
+    return filtered_string
 
 def merge_the_tools(string,k):
+    # slices the string into k different elements
     t_1 = [string[char:char+k] for char in range(0, len(string),k)]
-    t_0 = set()
-    list = []
-    word = ["AAB","ACA"]
+    t_0 = []
 
-    for letter in word:
-        for char in letter:
-            if char not in t_0:
-                t_0.add(char)
-                list.append(char)
+    for subsequence in t_1:
+        #filteres out duplicates from each subsequence
+        current_filtered_word = filter(subsequence)
+        print(current_filtered_word)
 
-    return ''.join(list)
-
-
+    return t_0
 
 def main():
     s = "AABCAAADA"
     k = 3
-    print(merge_the_tools(s,k))
-
+    merge_the_tools(s,k)
 
 if __name__ == "__main__":
     main()
