@@ -12,23 +12,26 @@ Given  and , print  lines where each line  denotes string .
 
 """
 
-
 def merge_the_tools(string,k):
-
     t_1 = [string[char:char+k] for char in range(0, len(string),k)]
-    t_0 = []
+    t_0 = set()
+    list = []
+    word = ["AAB","ACA"]
 
-    for index, word in enumerate(t_1):
-        for char in word:
-            if word.count(char) == 1:
-                print(char)
+    for letter in word:
+        for char in letter:
+            if char not in t_0:
+                t_0.add(char)
+                list.append(char)
+
+    return ''.join(list)
 
 
 
 def main():
     s = "AABCAAADA"
     k = 3
-    merge_the_tools(s,k)
+    print(merge_the_tools(s,k))
 
 
 if __name__ == "__main__":
