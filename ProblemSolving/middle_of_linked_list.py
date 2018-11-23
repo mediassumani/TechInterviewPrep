@@ -9,7 +9,7 @@ from linkedlist import LinkedList
 
 
 def find_middle(linked_list):
-
+    """ Return the middle of the linked_list"""
     counter = 0
     length = linked_list.length()
     current_node = linked_list.head
