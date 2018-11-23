@@ -5,26 +5,31 @@ in the given lists. Order of elments in output lists doesn’t matter.
 """
 from linkedlist import LinkedList
 
-def union(ll_one, ll_two):
+def union_and_intersection(ll_one, ll_two):
+    """ Return the a tuple that contains a union and intersection ll of the two lists"""
 
     union_ll = LinkedList()
     intersection_ll = LinkedList()
-    # raises an error if both list are empty
+
+    # Edge Cases
     if ll_one.length() is 0 and ll_two.length() is 0:
         raise ValueError("Both List are empty.")
-
-    # returns empty union list and second list if the first is empty
     if ll_one.length() is 0:
         return (union_ll, ll_two)
     elif ll_two.length() is 0:
         return (union_ll, ll_one)
 
-    outer_current_node = ll_one.head
+    outer_current_node = ll_one.head # the current node(s) of the first list argument
+
+    # Traverse both lists
     while outer_current_node is not None:
-        inner_current_node = ll_two.head
+        inner_current_node = ll_two.head # the current node(s) of the second list argument
         while inner_current_node is not None:
+            # checks if element are equal, forming union ll
             if inner_current_node.data == outer_current_node.data :
                 union_ll.append(outer_current_node.data)
+
+                # checks if all elemnt from ll_two is appended, avoiding duplicates
             if intersection_ll.length() <= ll_two.length():
                 intersection_ll.append(inner_current_node.data)
             inner_current_node = inner_current_node.next
