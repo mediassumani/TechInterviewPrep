@@ -52,7 +52,7 @@ def main():
     list_two.append(5)
     list_two.append(7)
 
-    print(union(list_one, list_two))
+    print(union_and_intersection(list_one, list_two))
 
 if __name__ == '__main__':
     main()
