@@ -1,6 +1,6 @@
 # Technical Interview Preparation
 
-### Tips from Avery Durant on Coding challenges:
+### Tips from <a href="https://github.com/Avery246813579">Avery Durant</a> on Coding challenges:
 
 
 * Understand the Question
