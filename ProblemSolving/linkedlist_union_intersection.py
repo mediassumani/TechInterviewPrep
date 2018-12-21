@@ -20,7 +20,6 @@ def union_and_intersection(ll_one, ll_two):
         return (union_ll, ll_one)
 
     outer_current_node = ll_one.head # the current node(s) of the first list argument
-
     # Traverse both lists
     while outer_current_node is not None:
         inner_current_node = ll_two.head # the current node(s) of the second list argument
