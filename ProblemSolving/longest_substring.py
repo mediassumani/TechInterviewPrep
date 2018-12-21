@@ -2,7 +2,10 @@
 PROBLEM:
     - Given a string, find the length of the longest substring without repeating characters.
     Time allocated : 20 minutes
-    Time used :
+    Time used : 1 hour
+    Time Complexity :
+        - Worst Case : O(n) if we have to trasverse s at its entirerity
+        - Best Case : O(1) if the length of s is 0
 """
 
 
