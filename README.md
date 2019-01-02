@@ -11,7 +11,7 @@
 * Optimize and Big O(n)
 
 
-### Tips
+### Tips (from Avery Durant)
 * State the obvious
 * State the obvious answer before thinking of the right one
 * Explain why it's not he best answer
