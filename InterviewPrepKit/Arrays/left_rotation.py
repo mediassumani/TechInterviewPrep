@@ -1,23 +1,22 @@
 
-def gcd(a, b):
+def find_gcd(a, b):
     if b == 0:
         return a;
     else:
-        return gcd(b, a % b)
+        return find_gcd(b, a % b)
 
 
 def left_rotation(arr, d):
     ''' Juggling Algorithm to rotate array by n rotations'''
     length  = len(arr)
-    gcd = gcd(d,length)
 
-    for i in range(gcd):
+    for i in range(find_gcd(length,d)):
         temp = arr[i]
         j = i
         while 1:
             k = j + d
-            if k >= n:
-                k = k - n
+            if k >= length:
+                k = k - length
             if k == i:
                 break
             arr[j] = arr[k]
@@ -28,8 +27,9 @@ def left_rotation(arr, d):
 def main():
 
     arr = [1,2,3,4,5]
-    #print(left_rotation(list,1))
-    print(gcd(3,12))
+    left_rotation(arr,1)
+    for i in range(len(arr)):
+        print ("% d" % arr[i], end =" ")
 
 if __name__ =='__main__':
     main()

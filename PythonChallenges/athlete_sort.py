@@ -10,8 +10,7 @@ def sort_athlete(N, M, nested_arr, k):
             current_athlete = athlete
             if attribute == current_athlete[k]:
                 sorted_atheltes.append(current_athlete)
-
-    print(sorted_atheltes)
+    
 
 def main():
 
