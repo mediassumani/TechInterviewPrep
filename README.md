@@ -1,6 +1,6 @@
 # Technical Interview Preparation
 
-### During a coding challenge...
+### Coding Challenge
 
 * Understand the Question
 * Brain Storm Solutions
@@ -11,13 +11,14 @@
 * Optimize and Big O(n)
 
 
-### Tips (from Avery Durant)
+### Onside Interview
+
+* Think outloud
+* Ask clarifying questions(return type, mutate or not mutate input, input type, etc...)
 * State the obvious
-* State the obvious answer before thinking of the right one
-* Explain why it's not he best answer
-* Show your understanding
-* Compare and contrast data structures
-* Always state O(n)
-* Practice and record failures
-* When practicing make sure you write down what you did wrong
+* Call out assumptions
+* State(out loud) the language of choice
+* Pseudocode
+* Code
+* Optimize and Big O(n) 
 
