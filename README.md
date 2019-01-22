@@ -1,23 +1,24 @@
 # Technical Interview Preparation
 
-### During a coding challenge...
+### Coding Challenge
 
-* Understand the Question
-* Brain Storm Solutions
-* Test Cases with Brainstorm
-* Sudo Code
-* Identify the proper data struture to use. Why use that?(LinkedList, Set, Stack, ect...)
-* Code
-* Optimize and Big O(n)
+* Listen and Understand the Question
+* Come up with examples
+* Identify a Brute force solution (dont' code it)
+* Optimize the Brute force solution
+* Walk through your algorithm
+* Start coding (coding style matters)
+* Test (double check each line and analyze edge cases)
 
 
-### Tips (from Avery Durant)
+### Onside Interview
+
+* Think outloud
+* Ask clarifying questions(return type, mutate or not mutate input, input type, etc...)
 * State the obvious
-* State the obvious answer before thinking of the right one
-* Explain why it's not he best answer
-* Show your understanding
-* Compare and contrast data structures
-* Always state O(n)
-* Practice and record failures
-* When practicing make sure you write down what you did wrong
+* Call out assumptions
+* State(out loud) the language of choice
+* Pseudocode
+* Code
+* Optimize and Big O(n) 
 
