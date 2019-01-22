@@ -2,13 +2,13 @@
 
 ### Coding Challenge
 
-* Understand the Question
-* Brain Storm Solutions
-* Test Cases with Brainstorm
-* Sudo Code
-* Identify the proper data struture to use. Why use that?(LinkedList, Set, Stack, ect...)
-* Code
-* Optimize and Big O(n)
+* Listen and Understand the Question
+* Come up with examples
+* Identify a Brute force solution (dont' code it)
+* Optimize the Brute force solution
+* Walk through your algorithm
+* Start coding (coding style matters)
+* Test (double check each line and analyze edge cases)
 
 
 ### Onside Interview
