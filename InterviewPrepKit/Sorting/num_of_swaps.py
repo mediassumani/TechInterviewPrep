@@ -1,3 +1,4 @@
+# Worst case : O(n)^2
 def count_swaps(arr):
 
     num_of_iterations = len(arr) - 1
