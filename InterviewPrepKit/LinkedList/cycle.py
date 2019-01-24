@@ -1,5 +1,6 @@
+# Worst Case : O(n) Linear Time if we must traverse the entire linkedList
+# Best Case : O(1) Constant time if next pointer of head is empty
 def has_cycle(head):
-
 
      # Check edge case
      if head.next is None:
