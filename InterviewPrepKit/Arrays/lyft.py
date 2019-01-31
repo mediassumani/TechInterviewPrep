@@ -15,6 +15,9 @@ def compute(arr):
     return return_list
 
 
+def optimized_compute(arr):
+    
+
 def main():
     arr = [1,2,3,4]
     print(compute(arr))
