@@ -1,9 +1,14 @@
 
-#O(n)^2
+# Time : O(n)^2
+# Space : O(1) -> constant space
 def compute(arr):
 
     return_list = []
     arr_size = len(arr)
+
+    # checks if the array is empty or with 1 element
+    if len(arr) <= 1:
+        return arr
 
     for i in range(arr_size):
         temp_prod = 1
@@ -15,11 +20,10 @@ def compute(arr):
     return return_list
 
 
-def optimized_compute(arr):
-    
+
 
 def main():
-    arr = [1,2,3,4]
+    arr = [1,2,0,0]
     print(compute(arr))
 
 if __name__ == "__main__":
