@@ -14,5 +14,5 @@ def reverse(head):
         curr.prev = curr.next
         curr.next = temp
         curr = curr.prev
-        
+
     return temp.prev
