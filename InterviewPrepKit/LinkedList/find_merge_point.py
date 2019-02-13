@@ -1,14 +1,21 @@
+''' Solved with help from Artelius on Stack Overflow'''
+
 def find_merge_node(head1, head2):
 
-    current_one = head1
-    current_two = head2
-    while current_one.next and current_two.next != None:
-        if current_one.next != current_two.next :
-            current_one = current_one.next
+    currentA = head1
+    currentB = head2
+
+    while currentA != currentB:
+        if currentA.next == None :
+            currentA = head1
         else:
-            return current_one.next.data
+            currentA = currentA.next;
 
-
+        if currentB.next == None :
+            currentB = head2
+        else:
+            currentB = currentB.next
+    return currentB.data
 
 def main():
     pass
