@@ -1,6 +1,6 @@
 # Technical Interview Preparation
 
-### Coding Challenge
+### Coding Challenges
 
 * Listen and Understand the Question
 * Come up with examples
