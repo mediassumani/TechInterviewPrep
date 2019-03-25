@@ -8,7 +8,7 @@
     Time used : 50 minutes
     Status : completed but surpassed time limit
     
-''''
+'''
 
 class Solution(object):
     def search(self, nums, target):
