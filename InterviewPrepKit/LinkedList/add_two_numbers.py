@@ -26,7 +26,6 @@ class Solution(object):
         # traverse through both list
         while l1 and l2:
             temp_sum = l1.val + l2.val
-
             if saver != 0:
                 temp_sum += saver
             if temp_sum >= 10:
