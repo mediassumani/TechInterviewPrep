@@ -9,6 +9,7 @@
 * Walk through your algorithm
 * Start coding (coding style matters)
 * Test (double check each line and analyze edge cases)
+* Optimize and Big O(n)
 
 
 ### Onside Interview
