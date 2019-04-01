@@ -5,7 +5,7 @@
 
 In computer science, BigO notation is a way to measure time and space complexity of a given algorithm.
 
-#### O(1) - constant Time
+### O(1) - constant Time
 
 This runtime referes to algorithms that performes at a constant time regardless of the input size.
 
@@ -19,7 +19,7 @@ NOTE : The algorithm above is constant time because that's roughly how long it t
 * Conditional statement (if, else)
 * Returning a value
 
-#### O(log n) - Logarithmic Time
+### O(log n) - Logarithmic Time
 
 This runtime refers to:
 
@@ -47,7 +47,7 @@ def binary_search(arr, item):
       low = middle + 1
 ```
 
-#### O(n) - Linear Time
+### O(n) - Linear Time
 
 This runtime referes to algorithms that performes at a linear time that grows proportionaly with the size of the input.
 
@@ -61,14 +61,14 @@ def linear_search(arr, item):
   return [index for index in arr if arr[index] == item]
 ```
 
-#### O(n log n) - 
+### O(n log n) - 
 
 
-#### O(n^2) - Quadratic Time
+### O(n^2) - Quadratic Time
 
 
-#### O(2^n) - 
+### O(2^n) - 
 
 
 
-#### O(n!)
+### O(n!)
