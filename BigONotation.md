@@ -13,6 +13,11 @@ This runtime referes to algorithms that performes at a constant time regardless 
 def print_name(name):
   print(name)
 ```
+NOTE : The algorithm above is constant time because that's roughly how long it takes for the compiler to print to the standard outpout. Other common O(1) operations are:
+
+* Assigning a variable
+* Conditional statement (if, else)
+* Returning a value
 
 #### O(log n) - Logarithmic Time
 
