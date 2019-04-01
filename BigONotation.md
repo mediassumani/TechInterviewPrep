@@ -10,16 +10,33 @@ In computer science, BigO notation is a way to measure time and space complexity
 This runtime referes to algorithms that performes at a constant time regardless of the input size.
 
 ``` python
-
 def print_name(name):
-''' 
-  Worst Case : O(1)
-'''
-
   print(name)
 ```
 
 #### O(log n) - Logarithmic Time
+
+This runtime refers to:
+
+* The choice of the next element on which to perform some action is one of several possibilities.
+* Only one will need to be chosen.
+* The elements on which the action is performed are digits of n.
+
+```python
+
+def binary_search(arr, item):
+  
+  low = 0
+  high = len(arr)
+  while(low <= high):
+    middle = int((low+high)/2)
+    if arr[middle] == item:
+      return middle
+    elif arr[middle] > item:
+      high = middle - 1
+     else:
+      low = middle + 1
+```
 
 #### O(n) - Linear Time
 
