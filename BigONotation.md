@@ -47,6 +47,8 @@ def binary_search(arr, item):
       low = middle + 1
 ```
 
+<bold>NOTE</bold>: The runtime of a recursive funtion with multiple branches is typically O(branches^ depth)
+
 ### O(n) - Linear Time
 
 This runtime referes to algorithms that performes at a linear time that grows proportionaly with the size of the input.
