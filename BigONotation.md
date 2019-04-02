@@ -66,6 +66,16 @@ def linear_search(arr, item):
 
 ### O(n^2) - Quadratic Time
 
+This runtime referes to algorithms that performe a certain computation N squared times where N is a given size of the input.
+
+```python
+
+def stuff(arrOne, arrTwo):
+  
+  for i in arrOne:
+    for j+1 in arrTwo:
+      print(j)
+```
 
 ### O(2^n) - 
 
