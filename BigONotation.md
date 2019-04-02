@@ -3,7 +3,7 @@
 
 ### Overview 
 
-In computer science, BigO notation is a way to measure time and space complexity of a given algorithm.
+In computer science, BigO notation is a way to measure time and space complexity of a given algorithm. These are my notes from Gayle Laakmann's Cracking The Coding Interview.
 
 ### O(1) - constant Time
 
