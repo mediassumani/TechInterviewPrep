@@ -12,7 +12,7 @@
 
 ### Listen
 
-  ** * Listen very carefully to the question being asked.
+  * Listen very carefully to the question being asked.
 
 ### Example
 
