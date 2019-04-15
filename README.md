@@ -11,3 +11,4 @@
 7. Test
 
 
+NOTE: Keep talking out loud throughout this whole process.
