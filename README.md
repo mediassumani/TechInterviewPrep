@@ -2,8 +2,8 @@
 
 ### A problem-Solving Flow Chart
 
-1. Listen
-2. EXample
+1. Listen (write down important information about the question)
+2. Example
 3. Brute Force
 4. Optimize
 5. Walk Through
