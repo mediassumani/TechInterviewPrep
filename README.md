@@ -42,9 +42,24 @@
 
 ### Walk through
 
+  * After you've got your algorithm, don't just straight into coding.
+  * Take a moment to solidigy your understanding of the algorithm.
+  * Make sure to know the variables are and when they change
 
 ### Implement
 
+  * Now that you have a good understanding, start coding.
+  * If white board, start coding from the far top left
+  * Write beautiful code.
+  * Error checks.
+  * Use other helper funtions, classes/structs or at least pretend they're there and you'll fill the details later.
+
 ### Test
+
+  * Should not submit(or say you're done) your code without testing it.
+  * Start with a conceptual test - walking through your code line by line and explaining it to the interviewer.
+  * Hot spots - base case in recursive code, integer divition, Null nodes in Binary Trees.
+  * Test cases - Now use an actual, specific test for the code. Use a small one to be faster to check.
+  * Special cases - Test the code against Null, empty, or single element values, the extreme cases, etc...
 
 NOTE: Keep talking out loud throughout this whole process.
