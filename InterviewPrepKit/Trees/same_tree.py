@@ -8,7 +8,6 @@ from collections import deque
       elif (p and not q) or (q and not p):
           return False
 
-
       queu_one = deque([p])
       queu_two = deque([q])
 
@@ -25,7 +24,6 @@ from collections import deque
               queu_two.append(curr_two.left)
 
           elif (curr_one.left and not curr_two.left) or (curr_two.left and not curr_one.left):
-
               return False
 
           if curr_one.right and curr_two.right:
@@ -34,6 +32,5 @@ from collections import deque
 
           elif (curr_one.right and not curr_two.left) or (curr_two.right and not curr_one.right) :
               return False
-
       return True
             
