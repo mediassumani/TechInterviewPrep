@@ -84,3 +84,8 @@ def stuff(arrOne, arrTwo):
 
 
 ### O(n!)
+
+
+## Space Complexity 
+
+This refers to the largest size of memory that can be used at runtime of an algorithm.
