@@ -1,5 +1,10 @@
 from binarytree import BinarySearchTree
 
+'''
+    Question : Delete a binary tree by deallocating all its nodes.
+    Time : 10 minutes
+    Solution : Depth first Search (Post Order)
+'''
 def visit(node):
 
     print("Node deallocated = ", node)
