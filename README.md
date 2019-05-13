@@ -1,6 +1,6 @@
 # Technical Interview Preparation
 
-## A problem-Solving Flow Chart from CTCI
+### A problem-Solving Flow Chart from CTCI
 
 1. Listen (write down important information about the question)
 2. Example
