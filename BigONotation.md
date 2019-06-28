@@ -1,9 +1,11 @@
 
 # BigO Notation
 
-### Overview 
+## Overview 
 
-In computer science, BigO notation is a way to measure time and space complexity of a given algorithm. These are my notes from Gayle Laakmann's Cracking The Coding Interview.
+In computer science, BigO notation is a way to measure time and space complexity of a given algorithm. These are my notes from Gayle Laakmann's Cracking The Coding Interview and other resources.
+
+## Time Complexity(runtime)
 
 ### O(1) - constant Time
 
@@ -64,7 +66,19 @@ def linear_search(arr, item):
 ```
 
 ### O(n log n) - 
+This runtime refers to algorithms that does an O(log n) operations n amount of times. 
 
+```python
+
+def two_sum(arr, target):
+
+  sorted_arr = sorted(arr)
+  for num in sorted_arr: O(n)
+    other_val = target - num
+    index_other_val = binary_searh(arr, other_val) # Binary search is O(log n)
+    if index_other_val:
+      return [num, arr[index_other_val]]
+```
 
 ### O(n^2) - Quadratic Time
 
