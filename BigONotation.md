@@ -102,4 +102,11 @@ def stuff(arrOne, arrTwo):
 
 ## Space Complexity 
 
-This refers to the largest size of memory that can be used at runtime of an algorithm.
+* This refers to the largest size of memory that can be used at runtime of an algorithm.
+* Memory can be used for :
+    * Variables
+    * Program instruction
+    * Execution
+    
+NOTE: For algorithm analysis, we are only concerned with variables allocation since that's what we can manage, not low level stuff.
+
