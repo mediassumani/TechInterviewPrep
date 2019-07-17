@@ -14,7 +14,6 @@ class Node(object):
         self.parent = None
 
 
-
 def get_cheapest_cost(root):
     
     queue = deque([root])
