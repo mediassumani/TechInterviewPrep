@@ -36,7 +36,7 @@ def main():
     graph['Rob'] = []
     graph['Max'] = ["Cenz", "Sarin"]
     
-    print(find_common_friend(graph, "Mace", "Max"))
+    print(find_common_friend(graph, "Mace", "Sarin"))
 
 if __name__ == "__main__":
     main()
