@@ -15,16 +15,18 @@ def find_shortest_path(graph, source):
     priority_queue = []
     for node in graph:
         
-        heapq.heappush(priority_queue, (weight_to_get_to[node], node))
+        heapq.heappush(priority_queue, (weight_to_get_to[node], node)) # heapq builds an array of tuples with a node and its weight
+    
 
 
     while len(priority_queue) > 0:
         
         # deque the next node from the priority queue
         cheapest_cost, cheapest_node = heapq.heappop(priority_queue)
+        # Add the dequeued node in the set of visited nodes
         dequeued_nodes.add(cheapest_node)
 
-        # Update the wight_to_get_to for neightbor nodes
+        # Visit the neighbors of the dequeued nodes
         for neighbor, weight in graph[cheapest_cost]:
 
             # Skip the neighbor that's seen already
