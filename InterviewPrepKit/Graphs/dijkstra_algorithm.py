@@ -13,14 +13,10 @@ def find_shortest_path(graph, source):
 
     # Priority queue ordering nodes by the weight to get to them
     priority_queue = []
-    for node in graph:
-        
+    for node in graph:    
         heapq.heappush(priority_queue, (weight_to_get_to[node], node)) # heapq builds an array of tuples with a node and its weight
     
-
-
     while len(priority_queue) > 0:
-        
         # deque the next node from the priority queue
         cheapest_cost, cheapest_node = heapq.heappop(priority_queue)
         # Add the dequeued node in the set of visited nodes
@@ -44,13 +40,6 @@ def find_shortest_path(graph, source):
 
     return weight_to_get_to
 
-            
-
-
-        
-
-    
-
 def main():
     
     graph = {}
@@ -63,7 +52,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
