@@ -1,8 +1,3 @@
-'''
-Given a 2-d grid map of '1's (land) and '0's (water), count the number of islands.
-An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically
-'''
-
 def find_coordinates(matrix, element, n, m):
     '''
         Finds the x,y coordinates of an element in matrix given row size n, and column size m
