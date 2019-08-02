@@ -1,13 +1,11 @@
 def is_unique(string):
     
     histogram = {}
-
     for char in string:
         if char not in histogram:
             histogram[char] = 1
         else:
             return False
-
     return True
 
 def get_long_sbtrs(string):
@@ -22,7 +20,6 @@ def get_long_sbtrs(string):
                 sbtrs.append(curr_sbtr)
 
     return max(sbtrs, key=len)
-
 
 def main():
     
