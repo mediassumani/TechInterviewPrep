@@ -35,32 +35,12 @@ def get_most_frequent(arr, n):
             result.append(key)
     return result
 
-def get_most_frequent_improved(arr, n):
-
-    d = create_histogram(arr)
-    result = []
-    count = 0
-
-    for w in sorted(d, key=d.get, reverse=True):
-
-        if count == n:
-            break
-        count += 1
-        result.append(w)
-
-    return result
-
-def get_most_frequent_heapq(arr):
-    pass
     
 def main():
-    
-    freq = Counter()
+
     colors = ["red", "blue", "red", "yellow", "purple", "blue", "red", "orange"]
-
-    #print(get_most_frequent(colors, 1))
-    print(get_most_frequent_improved(colors, 2))
-
+    
+    get_most_frequent(colors, 1)
 
 if __name__ == "__main__":
     main()
