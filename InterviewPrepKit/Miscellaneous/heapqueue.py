@@ -11,11 +11,19 @@ def create_histogram(arr):
     return histogram
 
 def get_most_frequent_heapq(arr, n):
-
-    heap = []
-    histogram = create_histogram(arr) # O(m) where m is the # of elements in arr
     
+    histogram = create_histogram(arr) # O(m) where m is the # of elements in arr
+    heap = []
+
     for key,val in histogram.items():
         heapq.heappush(heap, (val,key)) # O(log n)
-    
     return heapq.nlargest(n, heap)
+
+def main():
+
+    colors = ["red", "blue", "red", "yellow", "purple", "blue", "red", "orange", "purple"]
+    
+    print(get_most_frequent_heapq(colors, 3))
+
+if __name__ == "__main__":
+    main()
