@@ -12,15 +12,6 @@ def find_zero_positions(matrix):
                 positions.append(coordinate)
     return positions
 
-def swap_col(matrix, column, R, C):
-    
-    for row in range(R):
-        for col in range(C):
-            if col == column:
-                matrix[row][col] == 0
-                break
-    return matrix
-
 def change_values(matrix):
 
     positions = set(find_zero_positions(matrix))
@@ -37,7 +28,7 @@ def change_values(matrix):
             if curr_pos in positions:
                 # Swapping row
                 matrix[row] = [0 for i in range(row_length)]
-                
+
     return matrix
                 
 def main():
