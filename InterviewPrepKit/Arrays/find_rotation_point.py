@@ -37,7 +37,7 @@ def main():
         'othellolagkage',
     ]
 
-    find_rotation_point(words)
+    print(find_rotation_point(words))
 
 if __name__ == "__main__":
     main()
