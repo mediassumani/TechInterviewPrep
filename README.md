@@ -61,5 +61,3 @@
   * Hot spots - base case in recursive code, integer divition, Null nodes in Binary Trees.
   * Test cases - Now use an actual, specific test for the code. Use a small one to be faster to check.
   * Special cases - Test the code against Null, empty, or single element values, the extreme cases, etc...
-
-NOTE: Keep talking out loud throughout this whole process.
