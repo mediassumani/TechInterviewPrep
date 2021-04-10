@@ -1,4 +1,3 @@
-import UIKit
 import Foundation
 
 /*
@@ -27,6 +26,9 @@ class LinkedList {
         self.head = nil
     }
 
+    /*
+        Prints the LinkedList into a nice format. Time Complexity: O(1) if list empty, O(n) where n is the # of elements in the list
+     */
     func prepttyPrint() {
 
         if (self.isEmpty()) {
@@ -42,7 +44,7 @@ class LinkedList {
     }
     
     /*
-        Adds an element at the end of the LinkedList
+        Adds an element at the end of the LinkedList. Time Complexity: O(1) if list empty, O(n) where n is the # of elements in the list
      */
     func append(data: Int) {
         
@@ -67,7 +69,7 @@ class LinkedList {
     }
     
     /*
-        Adds an element at the beginning of the LinkedList
+        Adds an element at the beginning of the LinkedList. Time Complexity: O(1).
      */
     func prepend(data: Int) {
         
@@ -83,15 +85,14 @@ class LinkedList {
     }
     
     /*
-        Checks if an element exists in the LinkedList
+        Checks if an element exists in the LinkedList. Time Complexity: O(1) if list empty, O(n) where n is the # of elements in the list
      */
-    func found(element: Int) -> Bool {
+    func find(element: Int) -> Bool {
         
         if(self.isEmpty()) {
             print("LinkedList is Empty")
             return false
         } else {
-            
             var currentNode = self.head
             while(currentNode?.next != nil) {
                 if(currentNode?.data == element) {
@@ -103,13 +104,34 @@ class LinkedList {
         return false
     }
     
-    func remove() {
+    /*
+        Removes an element from the LinkedList. Time Complexity: O(1) if list empty or element is in the head, O(n) where n is the # of elements in the list
+     */
+    func remove(element: Int) -> Bool {
         
+        if(self.isEmpty()){
+            print("LinkedList is Empty")
+            return false
+        } else if (self.head?.data == element){
+            self.head = self.head?.next
+            self.size -= 1
+            return true
+            
+        } else {
+            var currentNode = self.head
+            while(currentNode?.next != nil) {
+                if(currentNode?.next?.data == element) {
+                    let tempNode = currentNode?.next
+                    currentNode?.next = tempNode?.next
+                    self.size -= 1
+                    return true
+                }
+                currentNode = currentNode?.next
+            }
+        }
+        return false
     }
     
-    func search() {
-        
-    }
     
     func isEmpty() -> Bool {
         return self.size == 0
@@ -123,9 +145,10 @@ linkedList.append(data: 8)
 linkedList.append(data: 10)
 linkedList.append(data: 30)
 linkedList.prepend(data: 7)
-linkedList.prepttyPrint()
 
-print("Is 10 in the list: \(linkedList.found(element: 10))")
-print("Is 3 in the list: \(linkedList.found(element: 3))")
-print("Is 30 in the list: \(linkedList.found(element:30))")
+print("Successfully remove 10 from the list: \(linkedList.remove(element: 10))")
+print("Successfully remove 7 from the list: \(linkedList.remove(element: 7))")
+
+print("Is 10 in the list: \(linkedList.find(element: 3))")
+print("Is 7 in the list: \(linkedList.find(element:30))")
 
