@@ -31,16 +31,18 @@ class LinkedList {
      */
     func prepttyPrint() {
 
+        var array = [Int]()
         if (self.isEmpty()) {
             print("LinkedList is Empty")
             return
         } else {
             var temp = self.head
             while(temp != nil){
-                print("Data is \(temp?.data ?? 0)")
+                array.append(temp?.data ?? 0)
                 temp = temp?.next
             }
         }
+        print(array)
     }
     
     /*
@@ -132,12 +134,56 @@ class LinkedList {
         return false
     }
     
+    /*
+        Inserts an element at the given index of the LinkedList. Time Complexity: O(1) if list empty,
+     */
+    func insert(element: Int, at index: Int) {
+        if(self.isEmpty()){
+            print("LinkedList is Empty")
+            return
+        } else {
+            let newNode = LinkedListNode(data: element)
+            var currentNode = self.head
+            var currentIndex = 0
+            
+            while(currentNode?.next != nil) {
+                if(currentIndex + 1 == index) {
+                    let tempNode = currentNode?.next
+                    currentNode?.next = newNode
+                    newNode.next = tempNode
+                    self.size += 1
+                }
+                currentNode = currentNode?.next
+                currentIndex += 1
+            }
+        }
+    }
+    
+    /*
+        Return the index of of an element in LinkedList. Time Complexity: O(1) if list empty, O(n) where n is the # of elements in the list
+     */
+    func index(element: Int) -> Int? {
+        if(self.isEmpty()){
+            print("LinkedList is Empty")
+            return nil
+        } else {
+            var currentNode = self.head
+            var currentIndex = 0
+            while(currentNode != nil) {
+                if(currentNode?.data == element) {
+                    return currentIndex
+                }
+                currentNode = currentNode?.next
+                currentIndex += 1
+            }
+        }
+        return nil
+    }
+    
     
     func isEmpty() -> Bool {
         return self.size == 0
     }
-    
-    
 }
 
 var linkedList = LinkedList()
@@ -145,10 +191,12 @@ linkedList.append(data: 8)
 linkedList.append(data: 10)
 linkedList.append(data: 30)
 linkedList.prepend(data: 7)
+linkedList.append(data: 2)
 
-print("Successfully remove 10 from the list: \(linkedList.remove(element: 10))")
-print("Successfully remove 7 from the list: \(linkedList.remove(element: 7))")
+linkedList.prepttyPrint()
+print("Index of 30 is \(linkedList.index(element: 30))")
+print("Index of 7 is \(linkedList.index(element: 7))")
+print("Index of 2 is \(linkedList.index(element: 2))")
 
-print("Is 10 in the list: \(linkedList.find(element: 3))")
-print("Is 7 in the list: \(linkedList.find(element:30))")
+
 
