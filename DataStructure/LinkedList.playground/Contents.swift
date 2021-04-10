@@ -54,14 +54,12 @@ class LinkedList {
             self.head = newNode
             self.size += 1
         } else {
-            
             // Create a "holder" node that can be use to keep reference over each iterated node in the list
             var currentNode = self.head
             while(currentNode?.next != nil) {
                 // Increase the position of the current node in the list sequentially until we get to the end
                 currentNode = currentNode?.next
             }
-            
             // Once the current node reaches the end, assign the new node as its next + increment the size by 1
             currentNode?.next = newNode
             self.size += 1
@@ -73,15 +71,36 @@ class LinkedList {
      */
     func prepend(data: Int) {
         
-        let tempNode = LinkedListNode(data: data)
+        let newNode = LinkedListNode(data: data)
         if (self.isEmpty()) {
-            self.head = tempNode
+            self.head = newNode
             self.size += 1
         } else {
-            tempNode.next = self.head
-            self.head = tempNode
+            newNode.next = self.head
+            self.head = newNode
             self.size += 1
         }
+    }
+    
+    /*
+        Checks if an element exists in the LinkedList
+     */
+    func found(element: Int) -> Bool {
+        
+        if(self.isEmpty()) {
+            print("LinkedList is Empty")
+            return false
+        } else {
+            
+            var currentNode = self.head
+            while(currentNode?.next != nil) {
+                if(currentNode?.data == element) {
+                    return true
+                }
+                currentNode = currentNode?.next
+            }
+        }
+        return false
     }
     
     func remove() {
@@ -103,7 +122,10 @@ var linkedList = LinkedList()
 linkedList.append(data: 8)
 linkedList.append(data: 10)
 linkedList.append(data: 30)
-
-
+linkedList.prepend(data: 7)
 linkedList.prepttyPrint()
+
+print("Is 10 in the list: \(linkedList.found(element: 10))")
+print("Is 3 in the list: \(linkedList.found(element: 3))")
+print("Is 30 in the list: \(linkedList.found(element:30))")
 
