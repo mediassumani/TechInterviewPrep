@@ -180,7 +180,6 @@ class LinkedList {
         return nil
     }
     
-    
     func isEmpty() -> Bool {
         return self.size == 0
     }
