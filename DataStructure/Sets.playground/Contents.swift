@@ -64,30 +64,18 @@ func findIntersection(sequenceA: [Int], sequenceB: [Int]) -> [Int] {
     
     // Time Complexity: 0(n) where n is # of elem in the sequence
     sequenceA.forEach { (elem) in
-        if(seenElements[elem] != nil) {
-            // set it to 1 if never seen before
-            seenElements[elem] = 1
-        } else {
-            // increase by 1 if seen befoe
-            seenElements[elem]! += 1
-        }
+        seenElements[elem] = (seenElements[elem] ?? 0) + 1
     }
     
     // Time Complexity: 0(n) where n is # of elem in the sequence
     sequenceB.forEach { (elem) in
-        if(seenElements[elem] != nil) {
-            // set it to 1 if never seen before
-            seenElements[elem] = 1
-        } else {
-            // increase by 1 if seen befoe
-            seenElements[elem]! += 1
-        }
+        seenElements[elem] = (seenElements[elem] ?? 0) + 1
     }
     
     // Time Complexity: 0(n) where n is # of elem in the sequence
     seenElements.forEach { (key, value) in
         if(value > 1) {
-            commonElements.append(value)
+            commonElements.append(key)
         }
     }
     
@@ -96,16 +84,9 @@ func findIntersection(sequenceA: [Int], sequenceB: [Int]) -> [Int] {
 
 
 let seqA = [1,2,3,4]
-let seqB = [6,7,1]
+let seqB = [6,7,1,3]
 let result = findIntersection(sequenceA: seqA, sequenceB: seqB)
 print(result)
-
-
-func findSymetricDifference() {
-    
-}
-
-
 
 
 //************************************************************************************
