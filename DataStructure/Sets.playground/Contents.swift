@@ -99,7 +99,6 @@ struct Movie: Hashable {
     var year: Int
     var rating: Int
     
-    
     init(name: String, year: Int, rating: Int) {
         self.name = name
         self.year = year
