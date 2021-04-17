@@ -16,5 +16,3 @@ studentScores["Medi"] = nil
 print(studentScores)
 
 
-
-
