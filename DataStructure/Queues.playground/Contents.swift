@@ -23,15 +23,35 @@ class ArrayQueue <T> {
         self.items.append(element)
     }
     
-    func dequeueu() {
+    func dequeueu() -> T {
         
+        let element = self.items.removeFirst()
+        return element
     }
     
     func isEmpty() -> Bool {
-        return false
+        return self.size() == 0
     }
     
     func size() -> Int {
-        return 1
+        return self.items.count
+    }
+    
+    func prettyPrint() {
+        
+        for (index, value) in self.items.enumerated() {
+            print("Position \(index) is \(value)")
+        }
     }
 }
+
+
+let arrayQueue = ArrayQueue<String>()
+arrayQueue.enqueue(element: "Medi")
+arrayQueue.enqueue(element: "Medo")
+arrayQueue.enqueue(element: "Meda")
+arrayQueue.prettyPrint()
+
+
+arrayQueue.dequeueu()
+arrayQueue.prettyPrint()
