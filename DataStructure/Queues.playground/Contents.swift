@@ -7,14 +7,6 @@ import Foundation
     * A Queue follows the FIFO  principle = first in -> first out
     * A Queue can be implemented using an Array(or a LinkedList as well) or a Node.
  */
-
-class Node<T> {
-    
-}
-
-class NodeQueue <T> {
-    
-}
 class ArrayQueue <T> {
     
     private var items = [T]()
@@ -54,4 +46,6 @@ arrayQueue.prettyPrint()
 
 
 arrayQueue.dequeueu()
+arrayQueue.prettyPrint()
+arrayQueue.enqueue(element: "Mede")
 arrayQueue.prettyPrint()
