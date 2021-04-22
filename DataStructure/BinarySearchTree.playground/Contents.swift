@@ -1,6 +1,29 @@
 import Foundation
 
 
+class ArrayQueue <T> {
+    
+    private var items = [T]()
+    
+    func enqueue(element: T) {
+        self.items.append(element)
+    }
+    
+    func dequeueu() -> T {
+        
+        let element = self.items.removeFirst()
+        return element
+    }
+    
+    func isEmpty() -> Bool {
+        return self.size() == 0
+    }
+    
+    func size() -> Int {
+        return self.items.count
+    }
+}
+
 class Node {
     
     var data: Int
@@ -64,15 +87,19 @@ class BinarySearchTree {
     
     func breadthFirstSearch() {
         
-        // Create a queue that while hold the recent nodes
-        // Check while the queue is not empty
-            // pop out the node from the queue
-                // if it has a left child
-                    // enqueue it
-                // if it has a right child
-                    // enqueue it
+        let visitedNodes = ArrayQueue<Node>()
+        visitedNodes.enqueue(element: rootNode ?? Node(data: 0))
+        
+        while (visitedNodes.size() > 0) {
+            
+            let currentNode = visitedNodes.dequeueu()
+            if(currentNode.leftNode != nil) {
+                visitedNodes.enqueue(element: currentNode.leftNode ?? Node(data: 0))
+            } else if (currentNode.rightNode != nil) {
+                visitedNodes.enqueue(element: currentNode.rightNode ?? Node(data: 0))
+            }
+        }
     }
-    
 }
 
 
