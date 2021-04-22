@@ -62,4 +62,17 @@ class BinarySearchTree {
         
     }
     
+    func breadthFirstSearch() {
+        
+        // Create a queue that while hold the recent nodes
+        // Check while the queue is not empty
+            // pop out the node from the queue
+                // if it has a left child
+                    // enqueue it
+                // if it has a right child
+                    // enqueue it
+    }
+    
 }
+
+
