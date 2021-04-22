@@ -85,6 +85,27 @@ class BinarySearchTree {
         
     }
     
+    func inorder(node: Node) -> [Int] {
+        
+        var visitedNodes = [Int]()
+        
+        // Visit the left subtree
+        if(node.leftNode != nil) {
+            self.inorder(node: node.leftNode ?? Node(data: 0))
+        }
+        
+        // visit the root
+        visitedNodes = visitedNodes + [node.data]
+        
+        // visit right subtree
+        if(node.rightNode != nil) {
+            self.inorder(node: node.rightNode ?? Node(data: 0))
+        }
+        
+        return visitedNodes
+    }
+    
+    
     func breadthFirstSearch() {
         
         let visitedNodes = ArrayQueue<Node>()
